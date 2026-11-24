@@ -1,0 +1,1 @@
+ArrayBuffer is a low-level representation of binary data in JavaScript. It is used to handle raw binary data, such as files or network responses, and can be manipulated using typed arrays or DataView objects.
