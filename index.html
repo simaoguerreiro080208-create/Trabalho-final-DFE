@@ -11,7 +11,87 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    <button id='myButton'>Click Me</button>
+    
+    <nav class="navbar navbar-expand-lg navbar-alucarro sticky-top">
+        <div class="container">
+            <!-- Logótipo / Marca -->
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+                <i class="bi bi-car-front-fill me-2 fs-3"></i>
+                <span>Alu<span class="brand-accent">Carro</span></span>
+            </a>
+
+            <!-- Botão Hambúrguer (Mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAluCarro" aria-controls="navbarAluCarro" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links de Navegação -->
+            <div class="collapse navbar-collapse" id="navbarAluCarro">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Início</a>
+                    </li>
+
+                    <!-- Dropdown: Frota -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownFrota" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            A Nossa Frota
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownFrota">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-fuel-pump me-2"></i>Citadinos & Económicos</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-truck-front me-2"></i>SUVs & Familiares</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-gem me-2"></i>Gama Executiva & Luxo</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-lightning-charge-fill me-2"></i>100% Elétricos & Híbridos</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Dropdown: Estações / Localizações -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownEstacoes" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Estações
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownEstacoes">
+                            <li><a class="dropdown-item" href="#">Aeroporto de Lisboa</a></li>
+                            <li><a class="dropdown-item" href="#">Aeroporto do Porto</a></li>
+                            <li><a class="dropdown-item" href="#">Aeroporto de Faro</a></li>
+                            <li><a class="dropdown-item" href="#">Funchal & Ponta Delgada</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Campanhas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contactos</a>
+                    </li>
+                </ul>
+
+                <!-- Área do Cliente / Reserva Rápida -->
+                <div class="d-flex align-items-center gap-2">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-alucarro dropdown-toggle" type="button" id="dropdownConta" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle me-1"></i> Área de Cliente
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownConta">
+                            <li><a class="dropdown-item" href="#">Iniciar Sessão</a></li>
+                            <li><a class="dropdown-item" href="#">Gerir a Minha Reserva</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Criar Conta</a></li>
+                        </ul>
+                    </div>
+                    <a href="#reservar" class="btn btn-alucarro fw-semibold">Reservar Já</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5 text-center">
+        <h1 class="display-5 fw-bold text-dark">Alugue o carro ideal com a <span style="color: #FF6B00;">AluCarro</span></h1>
+        <p class="lead text-muted">Redimensione a janela ou faça scroll para testar a responsividade e as animações.</p>
+        <div style="height: 1200px;"></div>
+    </div>
+
     <script src='script.js'></script>
 </body>
 </html>
