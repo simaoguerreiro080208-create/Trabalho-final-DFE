@@ -8,32 +8,33 @@ $(document).ready(function () {
         }
     });
 
-    // 2. Abrir dropdowns ao passar o rato (hover) em ecrãs Desktop (> 991px)
-    $('.navbar-alucarro .dropdown').hover(
-        function () {
-            if ($(window).width() > 991) {
-                $(this).find('.dropdown-menu').first().stop(true, true).fadeIn(180);
-                $(this).addClass('show');
-                $(this).find('.dropdown-toggle').attr('aria-expanded', 'true');
-            }
-        },
-        function () {
-            if ($(window).width() > 991) {
-                $(this).find('.dropdown-menu').first().stop(true, true).fadeOut(150);
-                $(this).removeClass('show');
-                $(this).find('.dropdown-toggle').attr('aria-expanded', 'false');
-            }
+    // 2. Abrir dropdowns ao passar o rato APENAS em ecrãs grandes (> 991px)
+    $('.navbar-alucarro .dropdown').on('mouseenter', function () {
+        if ($(window).width() > 991) {
+            const $toggle = $(this).find('.dropdown-toggle');
+            const dropdownInstance = bootstrap.Dropdown.getOrCreateInstance($toggle[0]);
+            dropdownInstance.show();
         }
-    );
+    }).on('mouseleave', function () {
+        if ($(window).width() > 991) {
+            const $toggle = $(this).find('.dropdown-toggle');
+            const dropdownInstance = bootstrap.Dropdown.getOrCreateInstance($toggle[0]);
+            dropdownInstance.hide();
+        }
+    });
 
-    // 3. Atualizar estado ativo ao clicar nos links simples da barra
-    $('.navbar-alucarro .nav-link:not(.dropdown-toggle)').on('click', function () {
-        $('.navbar-alucarro .nav-link').removeClass('active');
-        $(this).addClass('active');
+    // 3. Atualizar estado ativo e fechar o menu mobile de forma segura
+    $('.navbar-alucarro .nav-link:not(.dropdown-toggle), .navbar-alucarro .dropdown-item').on('click', function () {
+        if ($(this).hasClass('nav-link')) {
+            $('.navbar-alucarro .nav-link').removeClass('active');
+            $(this).addClass('active');
+        }
 
-        // Fechar o menu hambúrguer automaticamente em mobile após clicar
-        if ($(window).width() <= 991) {
-            $('.navbar-collapse').collapse('hide');
+        // Fecha o menu hambúrguer apenas se estiver aberto em ecrãs pequenos
+        const navbarCollapse = document.getElementById('navbarAluCarro');
+        if ($(window).width() <= 991 && navbarCollapse.classList.contains('show')) {
+            const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+            bsCollapse.hide();
         }
     });
 });
