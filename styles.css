@@ -146,3 +146,31 @@
         margin-left: 1rem;
     }
 }
+
+/* Banner Principal (Hero) */
+.hero-banner {
+    min-height: 520px;
+    /* Camada escura (65% a 75% de opacidade) por cima da foto do carro para dar contraste ao texto */
+    background-image: 
+        linear-gradient(rgba(18, 18, 18, 0.72), rgba(18, 18, 18, 0.62)),
+        url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-banner h1 {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    max-width: 650px;
+    color: #F1F1F1;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 767.98px) {
+    .hero-banner {
+        min-height: 420px;
+    }
+}
