@@ -91,7 +91,7 @@
 .btn-alucarro {
     background-color: var(--alucarro-orange);
     border-color: var(--alucarro-orange);
-    color: var(--alucarro-white);
+    color: white;
     border-radius: 6px;
     padding: 0.5rem 1.1rem;
 }
@@ -99,7 +99,7 @@
 .btn-alucarro:hover {
     background-color: var(--alucarro-orange-light);
     border-color: var(--alucarro-orange-hover);
-    color: var(--alucarro-white);
+    color: white;
 }
 
 .btn-outline-alucarro {
