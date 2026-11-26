@@ -6,6 +6,11 @@
     --alucarro-dark: #222222;
 }
 
+.brand-accent {
+    color: var(--alucarro-orange);
+    font-weight: 700;
+}
+
 /* Barra de Navegação Principal */
 .navbar-alucarro {
     background-color: var(--alucarro-white);
