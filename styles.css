@@ -152,7 +152,7 @@
     min-height: 520px;
     /* Camada escura (65% a 75% de opacidade) por cima da foto do carro para dar contraste ao texto */
     background-image: 
-        linear-gradient(rgba(18, 18, 18, 0.72), rgba(18, 18, 18, 0.62)),
+        linear-gradient(rgba(18, 18, 18), rgba(18, 18, 18)),
         url("IMAGENS/banner.jpg");
     background-size: cover;
     background-position: center;
