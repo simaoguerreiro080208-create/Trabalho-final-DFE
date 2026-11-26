@@ -153,7 +153,7 @@
     /* Camada escura (65% a 75% de opacidade) por cima da foto do carro para dar contraste ao texto */
     background-image: 
         linear-gradient(rgba(18, 18, 18, 0.72), rgba(18, 18, 18, 0.62)),
-        url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80');
+        url('#');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
