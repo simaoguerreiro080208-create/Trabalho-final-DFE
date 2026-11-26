@@ -1,9 +1,10 @@
 :root {
-    --alucarro-orange: #222222;
+    --alucarro-orange: #FF6B00;
     --alucarro-orange-hover: #E05A00;
     --alucarro-orange-light: #FFF3EB;
     --alucarro-white: #FFFFFF;
     --alucarro-dark: #222222;
+    --alucarro-btn-white: #FFFFFF;
 }
 
 .brand-accent {
@@ -93,7 +94,6 @@
     color: var(--alucarro-white);
     border-radius: 6px;
     padding: 0.5rem 1.1rem;
-    transition: background-color 0.2s ease;
 }
 
 .btn-alucarro:hover {
